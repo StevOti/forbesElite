@@ -1,0 +1,42 @@
+{% extends 'events/base.html' %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block content %}
+	
+	
+<section class="container mt-5">
+  <div class="col-md-8 justify-content-center mx-auto">
+    <div class="shadow-lg p-4 mb-5 bg-body rounded">
+      <h1>Login</h1>
+      <br/>
+      <form action="" method=POST>
+        {% csrf_token %}
+  
+      <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+    
+  
+  
+        
+  
+        <input type="submit" value="Submit" class="btn btn-lg text-light" style="background-color: rgba(244, 155, 51, 1)">
+  
+      </form>
+    </div>
+  </div>
+</section>
+		
+
+<br/><br/>	
+{% endblock %}

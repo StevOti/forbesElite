@@ -1,0 +1,662 @@
+{% extends 'events/base.html' %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <section class="">
+        <div class="d-flex min-vh-100" lc-helper="background" style="background:url('../../static/images/hero-img.jpg')  center / cover no-repeat fixed; background-color:#444; background-blend-mode: overlay;">
+            <div class="align-self-center text-start text-light col-md-5 offset-md-2">
+                <div class="lc-block mb-4">
+                    <div editable="rich">
+                        <h1 class="display-1 fw-bolder">Balance The Body, Open The Mind</h1>
+                    </div>
+                </div>
+
+                <div class="lc-block">
+                    <div editable="rich">
+                        <p class="lead">Unlocking Boundless Possibilities in your Body with Structural Biochemical Assisted Stretching and Exercise</p>
+                    </div>
+                </div>
+                <div class="lc-block">
+                    <div editable="rich" class="ms-lg-auto d-grid gap-2 d-md-block">
+                        <button class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)">Book A session</button>
+                        <button class="btn btn-outline-light border border-warning text-warning btn-lg" type="button">Join Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="lc-block">
+                        <h2 editable="inline" class="display-2 mb-5"><b>Explore Our Health & Wellness Services</b></h2>
+                        <p editable="inline"> Whether you're interested in weightlifting, cardio, cross-training, assisted stretching, or <br>even specialized programs like rehabilitation or sports-specific training, we have
+                            <br>a program that suits your interests and objectives. </p>
+                    </div><!-- /lc-block -->
+                </div>
+            </div>
+            <div class="row mt-4 ">
+                <!-- lazily load the Swiper CSS file -->
+                <link rel="preload" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+                <!-- lazily load the Swiper JS file -->
+                <script defer="defer" src="https://unpkg.com/swiper@8/swiper-bundle.min.js" onload="initializeSwiperRANDOMID();"></script>
+
+                <!-- lc-needs-hard-refresh -->
+
+                <script>
+                    function initializeSwiperRANDOMID(){
+                        const swiper = new Swiper(".mySwiper-RANDOMID", {
+                            slidesPerView: 1,
+                            grabCursor: true,
+                            spaceBetween: 30,
+
+                            pagination: {
+                                el: ".swiper-pagination",
+                                dynamicBullets: true,
+                            },
+                            breakpoints: {
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                992: {
+                                    slidesPerView: 3,
+                                },
+                            },
+                        });
+                    }
+                </script>
+
+                <style>
+                    .mySwiper-RANDOMID .card {max-width:21rem}
+                </style>
+
+                <div class="container py-6"><!-- Slider main container -->
+                    <div class="swiper mySwiper-RANDOMID">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper"><!-- Slides -->
+                            <div class="swiper-slide h-100">
+                                <div class="card  mx-auto border-0">
+                                    <div class="card-body">
+                                        <div class="lc-block">
+                                            <img class="img-fluid" src="{% static 'images/basic-fitness-training.jpg' %}" srcset="" sizes="" width="" height="" alt="Photo by Marla Gottschalk" loading="lazy">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="lc-block mb-3">
+                                                <div editable="rich">
+
+                                                    <h2 class="h5">Basic Fitness Training</h2>
+
+                                                    <p>Fitness begins with the fundamentals. In our personal training program, we focus on mastering the basics because they lay the foundation for a healthier, stronger you.</p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block">
+                                                <a class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)" href="{% url 'personal-training' %}">Discover More</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide h-100">
+                                <div class="card  mx-auto border-0">
+                                    <div class="card-body">
+                                        <div class="lc-block">
+                                            <img class="img-fluid" src="{% static 'images/inbody-scanning.jpg' %}" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Jon Tyson" loading="lazy">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="lc-block mb-3">
+                                                <div editable="rich">
+
+                                                    <h2 class="h5">InBody Scanning</h2>
+
+                                                    <p>We offer body scanning services using the In-body H20 Series which connects to the In-body App and can determine body composition in a non-invasive manner. </p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block">
+                                                <a class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)" href="{% url 'inbody-Scanning' %}">Discover More</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide h-100">
+                                <div class="card  mx-auto border-0">
+                                    <div class="card-body">
+                                        <div class="lc-block">
+                                            <img class="img-fluid" src="{% static 'images/stretching-packages.jpg' %}" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Vianney CAHEN" loading="lazy">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="lc-block mb-3">
+                                                <div editable="rich">
+
+                                                    <h2 class="h5">Stretching Packages</h2>
+
+                                                    <p>Discover the transformative power of stretching with our stretching programs designed to nurture your mind, body, and soul.</p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block">
+                                                <a class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)" href="{% url 'stretching-sessions' %}">Discover More</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide h-100">
+                                <div class="card  mx-auto border-0">
+                                    <div class="card-body">
+                                        <div class="lc-block">
+                                            <img class="img-fluid" src="{% static 'images/abc-trainerize.jpg' %}" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Cherry Lin" loading="lazy">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="lc-block mb-3">
+                                                <div editable="rich">
+
+                                                    <h2 class="h5">ABC Trainerize</h2>
+
+                                                    <p>Our Trainerize Program is your ticket to a healthier heart, improved endurance, and boundless vitality wherever you are located in the globe.</p>
+                                                </div>
+                                            </div>
+                                            <div class="lc-block">
+                                                <a class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)" href="{% url 'abc-trainerize' %}">Discover More</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination position-relative pt-5 bottom-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mt-5 mb-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="lc-block">
+                        <p style="color: rgba(244, 155, 51, 1);" editable="inline">Pricing</p>
+                        <h2 editable="inline" class="display-4 mb-4"><b>Our List Packages</b></h2>
+                        <p editable="inline" class="text-center bg-dark text-white p-3 rounded-3"  style="display: inline-block;">Billed Monthly or Per Session</p>
+                    </div><!-- /lc-block -->
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md-3">
+                    <div class="lc-block card h-100 p-4 py-xl-6 shadow-lg border-0 bg-dark text-white">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="lc-block mb-2">
+                                    <div editable="rich">
+                                        <p class="opacity-50 mb-0 ls-3" style="color: rgba(244, 155, 51, 1);">InBody Scan</p>
+
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-4">
+                                    <h3 editable="inline" class="fw-bolder d-inline rfs-30 ls-n2">KES. 1,000.00</h3>
+                                    <div class="opacity-50" editable="inline">per  session</div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Weight Measurement</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Muscle Reading</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Body Fat Percentage</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Nutrition Guide</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Body Composition</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Comprehensive Analysis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lc-block d-grid">
+                                <button class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)">Book NoW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="lc-block card h-100 p-4 py-xl-6 shadow border-0 text-white" style="background-color: rgba(244, 155, 51, 1)">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="lc-block mb-2">
+                                    <div editable="rich">
+                                        <p class="opacity-50 mb-0 ls-3">Starting at</p>
+
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-4">
+                                    <h3 editable="inline" class="fw-bolder d-inline rfs-30 ls-n2">KES. 12,800.00</h3>
+                                    <div class="opacity-50" editable="inline">30 Minutes Stretching 4 Times</div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Better Posture</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Flexibility</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Enhanced Athleticism</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Greater motion range</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Increased  Circulation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Reduced psychological Stress</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lc-block d-grid">
+                                <button class="btn text-white btn-lg" type="button" style="background-color: black">Book NoW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="lc-block card h-100 p-4 py-xl-6 shadow-lg border-0 bg-dark text-white">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="lc-block mb-2">
+                                    <div editable="rich">
+                                        <p class="opacity-50 mb-0 ls-3" style="color: rgba(244, 155, 51, 1);">Pro Starting Package</p>
+
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-4">
+                                    <h3 editable="inline" class="fw-bolder d-inline rfs-30 ls-n2">KES. 18,400.00</h3>
+                                    <div class="opacity-50" editable="inline">60 Minutes Stretching 4 Times</div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Enhanced Athletism</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Avoid Injury</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Reduced Stiffness</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Pain Relief</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Improved Balance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Enhanced Relaxation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lc-block d-grid">
+                                <button class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)">Book NoW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="lc-block card h-100 p-4 py-xl-6 shadow-lg border-0 bg-dark text-white">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="lc-block mb-2">
+                                    <div editable="rich">
+                                        <p class="opacity-50 mb-0 ls-3" style="color: rgba(244, 155, 51, 1);">Training Package</p>
+
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-4">
+                                    <h3 editable="inline" class="fw-bolder d-inline rfs-30 ls-n2">KES. 9200.00</h3>
+                                    <div class="opacity-50" editable="inline">Billed Monthly</div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Pilates</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Resistance Training</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Plyometrics</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Aerobics</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Calisthenics</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lc-block mb-2">
+                                    <div class="d-inline-flex w-100 gap-2 ">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1em" height="1em" viewBox="0 0 24 24" lc-helper="svg-icon" fill="currentColor" class="text-primary">
+                                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div editable="rich">
+                                            <p class="text-start">Speed Training</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lc-block d-grid">
+                                <button class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)">Book NoW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5 mb-5">
+        <div class="d-flex text-center" lc-helper="background" style="min-height: 60vh; background-attachment: fixed; background-size:cover; background-position: center center;background-color:#eee;background-image: url('../../static/images/cta.png');">
+            <div class="lc-block  my-3 align-self-center w-100 py-5">
+                <div editable="rich">
+                    <h2 class="display-4 text-white">DONT <span style="color: rgba(244, 155, 51, 1);">THINK</span> , BEGIN TODAY!</h2>
+                    <p editable="inline" class="text-white"> Your journey to a healthier, stronger you begins here at Forbes Elite. Whether you're looking to <br>build muscle, lose weight, or simply lead a healthier lifestyle, we're here to support you
+                        <br>every step of the way. </p>
+                    <div class="lc-block">
+                        <div editable="rich" class="ms-lg-auto d-grid gap-2 d-md-block">
+                            <button class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)">Book A session</button>
+                            <button class="btn btn-outline-light border border-warning text-warning btn-lg" type="button">Join Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5 mb-5">
+        <div class="container" style="padding-top: 10vh;padding-bottom:10vh">
+            <div class="row align-items-center px-2">
+                <div class="col-12 col-md-7 col-lg-6">
+                    <div class="lc-block mb-4">
+                        <div editable="rich">
+                            <h1>Talk to Us</h1>
+                            <p>We are open to having a conversation on tailoring an experience that would best fit your budget and health needs. Give us a call today. </p>
+                        </div>
+                    </div><!-- /lc-block -->
+                    <div class="lc-block d-flex mb-5">
+                        <div class="pe-3">
+                            <h3 class="h2 mb-0 text-secondary" editable="inline">100%</h3>
+                            <span editable="inline" class="mb-0 text-muted"> Satisfaction </span>
+                        </div>
+                        <div class="border-start"></div>
+                        <div class="px-3">
+                            <h3 class="h2 mb-0 text-secondary" editable="inline">24/7</h3>
+                            <span editable="inline" class="mb-0 text-muted"> Support </span>
+                        </div>
+                        <div class="border-start"></div>
+                        <div class="ps-3">
+                            <h3 class="h2 mb-0 text-secondary" editable="inline">+40k</h3>
+                            <span editable="inline" class="mb-0 text-muted"> Subscribers </span>
+                        </div>
+                    </div><!-- /lc-block -->
+                </div><!-- /col -->
+                <div class="text-end col-12 col-md-5 col-lg-6">
+                    <div class="col d-md-block d-none text-md-end">
+                        <button class="btn text-white btn-lg" type="button" style="background-color: rgba(244, 155, 51, 1)">Book A session</button>
+                    </div>
+                </div><!-- /col -->
+                <div class="d-block d-md-none">
+                    <div class="col justify-content-end">
+                        <button class="btn text-white" type="button" style="background-color: rgba(244, 155, 51, 1)">Book A session</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

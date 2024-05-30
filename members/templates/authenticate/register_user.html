@@ -1,0 +1,44 @@
+{% extends 'events/base.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+
+{% if form.errors %}
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            There was an error with your form...
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+
+
+{% endif %}	
+
+	<section class="container mt-5">
+		<div class="col-md-8 justify-content-center mx-auto">
+			<div class="shadow-lg p-4 mb-5 bg-body rounded">
+				<h1>Register</h1>
+			<br/>
+			
+			
+					<form action="{% url 'register_user' %}" method=POST>
+						{% csrf_token %}
+			
+						{{ form.as_p }}
+			
+			  
+			
+			
+						
+			<br/><br/>
+						<input type="submit" value="Submit" class="btn btn-lg text-white" style="background-color: rgba(244, 155, 51, 1)">
+			
+					</form>
+					
+			</div>
+		</div>
+	</section>
+<br/><br/>	
+{% endblock %}
